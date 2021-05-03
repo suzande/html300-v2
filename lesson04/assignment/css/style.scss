@@ -1,0 +1,182 @@
+// Import partials here
+@import '_base.normalize';
+
+// Common 
+$font-verdana: Verdana, Geneva, Tahoma, sans-serif;
+$font-tahoma: Tahoma, sans-serif;
+$font-small: .6rem;
+$font-medium: 1rem;
+$font-large: 1.5rem;
+$font-veryLarge: 2.0rem;
+
+* {
+  box-sizing: border-box;
+}
+/* start of css in SCSS file */
+header {
+  display: flex;
+  height: 20rem;
+}
+.header-photo-l {
+  padding-left: 5%;
+  width: 25%;
+  background-color: white;
+}
+.header-photo-r {
+  width: 25%;
+}
+.page-title {
+  padding-top: 4%;
+  width: 50%;
+  font-size: 2.1rem;
+}
+h1 {
+  padding-top: 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+h2 {
+  color:white;
+  font-size: $font-large;
+  padding-left: 5rem;
+}
+.nav-head {
+  display: flex;
+  padding-left: 10%;
+  background-color: #999966;
+}
+.page-links {
+  display: flex;
+  flex-direction: row;
+}
+.nav-item {
+  font-size: $font-large;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 5rem;
+}
+.nav-item:hover {
+    transition: all .1s ease-out-in;
+    transition-duration: 3s;
+    transform: scale(1.5);    
+  }
+.main-page {
+  text-align: center;
+  color: white;
+  padding-top: 10rem;
+  background-color: #336600;
+  padding: 0;
+  margin: 0;
+  height: 60%;
+}
+.interests {
+  list-style-type: none;
+  font-size: $font-large;
+  line-height: 2.0;
+  padding-left: 5rem;
+}
+// YouTube video for Transform, translate
+// https://www.youtube.com/watch?v=y9M0GoiYRcI 
+// https://www.youtube.com/watch?v=zHUpx90NerM
+.mountain {
+  transform: translate(50px,0);
+  animation-name: pageAnimation;
+  animation-duration: 4s;
+  transform: scale(1, 0.5);
+  &:hover {
+    transition-duration: 3s;
+    height: 3rem;
+  }
+  }
+//.mountain:hover {
+//    border-radius: 50%;
+//    transform: rotateY(180deg);
+ //   color: red;
+//  }
+.ocean {
+  transform: translate(-120px,0);
+  &:hover {
+    transform: scale(5,2) translate(-3rem,0);
+  }
+  transition: transform 2s;
+}
+.water {
+  transform: translate(100px,0);
+}
+.sites {
+  transform: translate(-150px, 0);
+}
+.last {
+  padding-bottom: 4rem;
+  transform: translate(45px,0);
+}
+.horseback {
+  width: 10%;
+  padding-bottom: 4rem;
+  position: relative;
+  animation-name: trips;
+  animation-duration: 4s;
+  animation-iteration-count: 3x;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+}
+.hiker {
+  width: 10%;
+  padding-bottom: 4rem;
+  position: relative;
+  animation-name: hiker;
+  animation-duration: 4s;
+  animation-iteration-count: 3x;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+}
+.kayak {
+  width: 10%;
+  padding-bottom: 4rem;
+  position: relative;
+  animation-name: kayak;
+  animation-duration: 4s;
+  animation-iteration-count: 3x;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes trips {
+  0% {top: 0px; top: 0px;}
+  25% {right: 500px; top: 0px;}
+  50% {right: 700px; top: 0px;}
+  75% {right: 800px; top: 0px;}
+  100% {right: 0px; top: 0px;}
+}
+@keyframes hiker {
+  0% {top: 0px; top: 0px}
+  25% {left: 500px; top: 0px;}
+  50% {left: 700px; top: 0px;}
+  75% {left: 800px; top: 0px;}
+  100% {right: 0px; top: 0px;}
+}
+@keyframes kayak {
+  0% {top: 0px; top: 0px}
+  25% {left: 20px; top: 30px;}
+  50% {right: 0px; top: 0px;}
+}
+footer {
+  display: flex;
+  height: 30rem;
+}
+.needle {
+  width: 20%;
+}
+.who-are-we {
+  flex-direction: column;
+  text-align: center;
+  font-family: $font-large;
+  font-size: $font-large;
+  padding-top: 5rem;
+  background-color: #333300;
+  color: white;
+  width: 60%;
+}
+.market {
+  width: 20%;
+} 
