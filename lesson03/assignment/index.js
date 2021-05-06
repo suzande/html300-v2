@@ -56,14 +56,12 @@ const cardList =
     }
   ];
 // Container constructor
-const container = document.querySelector('#container-list')
-
+const container = document.querySelector('.container')
+let cardHtml = " ";
 // Template for cardList
-cardList.forEach(function(el) {
-  let list = document.createElement('div');
-  list.setAttribute('class', 'card-who');
-  list.innerHTML = 
-    <div class="card-who">
+cardList.forEach(function (el) {
+  cardHtml = cardHtml.concat(
+    ` <div class="card-who">
       <img class="pup" src="img/headshot.jpg" alt="picture of dog">
       <h3>${el.name}</h3>
       <p>${el.jobTitle}</p>
@@ -80,9 +78,7 @@ cardList.forEach(function(el) {
     </div>
     <div class=linked>
       <img class="icon" src="img/linkedin.svg" alt="icon for LinkedIn">
-      <a href="paolo.linkedinprofile.com">${linkedInUrl}</a>
-    </div>
-  `;
+      <a href="paolo.linkedinprofile.com">${el.linkedInUrl}</a>
+    </div>`);
 });
-document.querySerlector(".container").innerHTML = cardHTML;
-});
+container.innerHTML = cardHtml;

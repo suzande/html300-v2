@@ -1,7 +1,7 @@
 // Import partials here
 @import '_base.normalize';
 
-// Common 
+// Common Font Sizes
 $font-verdana: Verdana, Geneva, Tahoma, sans-serif;
 $font-tahoma: Tahoma, sans-serif;
 $font-small: .6rem;
@@ -34,6 +34,7 @@ h1 {
   padding-top: 1rem;
   font-size: 2.5rem;
   text-align: center;
+  margin: 0;
 }
 h2 {
   color:white;
@@ -55,9 +56,9 @@ h2 {
   text-decoration: none;
   list-style-type: none;
   padding-left: 5rem;
+  transition: all .1s ease-out-in;
 }
 .nav-item:hover {
-    transition: all .1s ease-out-in;
     transition-duration: 3s;
     transform: scale(1.5);    
   }
