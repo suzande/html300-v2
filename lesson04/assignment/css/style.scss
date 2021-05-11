@@ -1,0 +1,183 @@
+// Import partials here
+@import '_base.normalize';
+
+// Common Font Sizes
+$font-verdana: Verdana, Geneva, Tahoma, sans-serif;
+$font-tahoma: Tahoma, sans-serif;
+$font-small: .6rem;
+$font-medium: 1rem;
+$font-large: 1.5rem;
+$font-veryLarge: 2.0rem;
+
+* {
+  box-sizing: border-box;
+}
+/* start of css in SCSS file */
+header {
+  display: flex;
+  height: 20rem;
+}
+.header-photo-l {
+  padding-left: 5%;
+  width: 25%;
+  background-color: white;
+}
+.header-photo-r {
+  width: 25%;
+}
+.page-title {
+  padding-top: 4%;
+  width: 50%;
+  font-size: 2.1rem;
+}
+h1 {
+  padding-top: 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+}
+h2 {
+  color:white;
+  font-size: $font-large;
+  padding-left: 5rem;
+}
+.nav-head {
+  display: flex;
+  padding-left: 10%;
+  background-color: #999966;
+}
+.nav-item {
+  font-size: $font-large;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 1rem 5rem 1rem 5rem;
+  transition: all .1s ease-out-in;
+}
+.nav-item:hover {
+    transition-duration: 3s;
+    transform: scale(1.5);    
+  }
+.main-page {
+  text-align: center;
+  color: white;
+  padding-top: 10rem;
+  background-color: #336600;
+  padding: 0;
+  margin: 0;
+  height: 60%;
+}
+.interests {
+  list-style-type: none;
+  font-size: $font-large;
+  line-height: 2.0;
+  padding-left: 5rem;
+}
+// YouTube video for Transform, translate
+// https://www.youtube.com/watch?v=y9M0GoiYRcI 
+// https://www.youtube.com/watch?v=zHUpx90NerM
+.mountain {
+  transform: translate(-120px,0);
+  &:hover {
+    transform: scale(5,2) translate(-3rem,0);
+  }
+  transition: transform 2s;
+}
+.ocean {
+  transform: translate(-200px,0);
+  &:hover {
+    transform: scale(5,2) translate(-3rem,0);
+  }
+  transition: transform 2s;
+}
+.water {
+  transform: translate(120px,0);
+  &:hover {
+    transform: scale(5,2) translate(-3rem,0);
+  }
+  transition: transform 2s;
+}
+.sites {
+  transform: translate(-160px,0);
+  &:hover {
+    transform: scale(5,2) translate(-3rem,0);
+  }
+  transition: transform 2s;
+}
+.last {
+  padding-bottom: 4rem;
+    transform: translate(-50px,0);
+  &:hover {
+    transform: scale(5,2) translate(-3rem,0);
+  }
+  transition: transform 2s;
+}
+.horseback {
+  width: 10%;
+  padding-bottom: 4rem;
+  position: relative;
+  animation-name: trips;
+  animation-duration: 4s;
+  animation-iteration-count: 3x;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+}
+.hiker {
+  width: 10%;
+  padding-bottom: 4rem;
+  position: relative;
+  animation-name: hiker;
+  animation-duration: 4s;
+  animation-iteration-count: 3x;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+}
+.kayak {
+  width: 10%;
+  padding-bottom: 4rem;
+  position: relative;
+  animation-name: kayak;
+  animation-duration: 4s;
+  animation-iteration-count: 3x;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes trips {
+  0% {top: 0px; top: 0px;}
+  25% {right: 25px; top: 0px;}
+  50% {right: 90px; top: 0px;}
+  75% {right: 110px; top: 0px;}
+  100% {right: 0px; top: 0px;}
+}
+@keyframes hiker {
+  0% {top: 0px; top: 0px}
+  25% {left: 25px; top: 0px;}
+  50% {left: 90px; top: 0px;}
+  75% {left: 110px; top: 0px;}
+  100% {right: 0px; top: 0px;}
+}
+@keyframes kayak {
+  0% {top: 0px; top: 0px}
+  25% {left: 20px; top: 30px;}
+  50% {right: 0px; top: 0px;}
+}
+footer {
+  display: flex;
+  height: 30rem;
+}
+.needle {
+  width: 20%;
+}
+.who-are-we {
+  flex-direction: column;
+  text-align: center;
+  font-family: $font-large;
+  font-size: $font-large;
+  padding-top: 5rem;
+  background-color: #333300;
+  color: white;
+  width: 60%;
+}
+.market {
+  width: 20%;
+} 
