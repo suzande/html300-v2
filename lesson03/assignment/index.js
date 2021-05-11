@@ -63,7 +63,7 @@ cardList.forEach(function(el) {
   let list = document.createElement('div');
   list.setAttribute('class', 'card-who');
   list.innerHTML = 
-    <div class="card-who">
+   `<div class="card-who">
       <img class="pup" src="img/headshot.jpg" alt="picture of dog">
       <h3>${el.name}</h3>
       <p>${el.jobTitle}</p>
@@ -84,5 +84,4 @@ cardList.forEach(function(el) {
     </div>
   `;
 });
-document.querySerlector(".container").innerHTML = cardHTML;
-});
+document.querySelector(".container").innerHTML = cardHTML;
