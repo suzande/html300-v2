@@ -4,3 +4,111 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Common Font Sizes
+$font-verdana: Verdana, Geneva, Tahoma, sans-serif;
+$font-tahoma: Tahoma, sans-serif;
+$font-small: .6rem;
+$font-medium: 1rem;
+$font-large: 1.5rem;
+$font-veryLarge: 2.0rem;
+
+img {
+  width: 50%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color:  #fff;
+}
+.header-photo-1 {
+  background-color:  #fff;
+  width: 50%;
+}
+.header-photo-2 {
+  background: #fff;
+  width: 50%;
+}
+.wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-areas: 
+    "header-1 header-2 header-2 header-3"
+    "nav nav nav nav"
+    "oneQuarter threeQuarter threeQuarter threeQuarter"
+    "footer-1 footer-2 footer-2 footer-3";
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-rows: 20% 15% 30% 20% 20%;
+  /*minmax(25rem, auto);*/
+}
+.header-1 {grid-area: header-1;}
+.header-2 {grid-area: header-2;}
+.header-3 {grid-area: header-2;}
+
+.nav {grid-area: nav;}
+.oneQuarter {grid-area: oneQuarter;}
+.threeQuarter {grid-area: threeQuarter;}
+.footer-1 {grid-area: four-1;}
+
+/*img {max-width: 100%;}*/
+
+.page-title {
+  background-color: #fff;
+  color: #333300;
+}
+.nav-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #999966;
+}
+.nav-item {
+  font-size: $font-large;
+  color: #fff;
+  text-decoration: none;
+  padding-left: 1rem;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #556B2F
+}
+.activity {
+  color: #fff;
+}
+.contentMain {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #336600;
+}
+p {
+  font-size: $font-large;
+  color: #fff;
+}
+.where {
+  color: #fff;
+  font-size: $font-large;
+}
+.mtBaker {
+  color: #fff;
+
+}
+.tulips {
+  color: #fff;
+}
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #333300;
+  color: #fff;
+}
+.needle {
+  width: 50%
+}
+.companyInfo {
+  font-size: $font-large;
+  color: #fff;
+}
+.market {
+  width: 50%;
+}
