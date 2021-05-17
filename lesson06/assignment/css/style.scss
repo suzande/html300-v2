@@ -4,3 +4,6 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.selector-for-some-widget {
+  box-sizing: content-box;
+}

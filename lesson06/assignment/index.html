@@ -1,15 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Assignment 06 - Bootstrap 5</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="fs-5 p-4">Welcome to destinations to vist site in Washington and Oregon!</h1>
+    </header>
+    <ul class="nav list-unstyled p-4 fs-5">
+        <li class="nav-item">
+            <a class="nav-link link-primary" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-secondary" href="destinations.html">Popular Tourist Destinations</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-secondary" href="cultural-events.html">Cultural Gatherings</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-secondary" href="watersports.html">WaterSports</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link link-secondary" href="upload-photos.html">Upload Photos</a>
+        </li>
+    </ul>
+    <main>
+        <section>
+            <form class="p-3">
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Email Address</label>
+                    <input type="email" class="form-control w-25" id=emailInput>
+                    <div id="emailAssistance" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="emailInputPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control w-25" id=emailInput>
+                    <div id="emailAssistance" class="form-text"></div>
+                </div>
+            </form>
+        </section>
+        <section>
+            <div class="form-check">
+                <input class="form-check-input ps2 p1" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label ps2 p1" for="flexCheckDefault">
+                    "I love mountains!"
+                </label>
+            </div>
+            <div class="form=check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label">
+                    "I love cultural events!"
+                </label>
+            </div>
+            <div class="form=check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label">
+                    "I love festivals!"
+                </label>
+            </div>
+            <div class="form=check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label">
+                    "I love watersports!"
+                </label>
+            </div>
+        </section>
+        <section>
+            <h2 class="fs-4 p-4 fst-italic">Select and item to see areas in Washington and Oregon</h2>
+            <div class="accordion accordion-flush p-1" id="accordionFlushElement">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne">
+                            Select here, to see places to roam while your in Washington.
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collage collapse"
+                        data-bs-parent="#accordionFlushElement">
+                        <div class="accordion-body lh-base">Enjoy locations in Washington State. Head West and you'll
+                            find
+                            the Ocean. Head East and you'll find the Cascade Mountain Range, Head further East and
+                            you'll
+                            find the plateau. Head SouthEast past the mountains and you'll meet Wine Country.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo">
+                            Select here, to see places to roam while your in Oregon
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushElement">
+                        <div class="accordion-body lh-base">Enjoy locations in Oregon State. From the Northern Border on
+                            Interstate 5. Head West and you'll find the Ocean. Head East and you'll be driving up the
+                            Columbia River, with numerous dam's. Head further east and it will be plateau as can be
+                            found in
+                            Washington. Head South and you'll find many beautiful areas to visit. Table Rock Famous for
+                            and
+                            special to Indigenous Peoples of Oregon.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
 </html>
