@@ -15,132 +15,153 @@ $font-veryLarge: 2.0rem;
 .wrapper {
   display: grid;
   width: 100%;
-  grid-template-columns: 250% 25% 25% 25%;
-  grid-template-rows: 100px 200px 200px 100px;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 0fr .2fr .2fr; 
 }
-header { grid-row: 1/2; grid-column: 1/5;}
+header {grid-row: 1/2; grid-column: 1/5;}
 nav {grid-row: 2/3; grid-column: 1/5;}
-side {grid-row: 3/4; grid-column: 1/2;}
-main {grid-row: 3/4; grid-column: 2/5;}
+aside {grid-row: 3/4; grid-column: 1/2;}
+section {grid-row: 3/4; grid-column: 2/5;}
 footer {grid-row: 4/5; grid-column: 1/5;}
-
-/*.wrapper {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 2fr 4fr 2fr;
-  grid-template-rows: 30% 10% 20% 10%;
-  grid-template-areas: 
-    "head-1 head-2-3 head-2-3 head-4"
-    "nav nav nav nav"
-    "side main main main"
-    "foot-1 foot-2-4 foot-2-4 foot-5";}
-  /*minmax(25rem, auto);
-.head-1 {grid-area: head-1;}
-.head-2-3 {grid-area: head-2-3;}
-.head-4 {grid-area: head-4;}
-.nav {grid-area: nav;}
-.side {grid-area: side;}
-.main {grid-area: main;}
-.foot-1 {grid-area: foot-1;}
-.foot-2-4 {grid-area: foot-2-4;}
-.foot-5 {grid-area: foot-5;}*/
 
 .header {
   display: flex;
   max-width: 100%;
   flex-direction: row;
-  background-color:  #fff;
+  background-color: #ffdd99;
 }
 .header-photo-1 {
-  background-color:  #fff;
-  width: 40%;
+  max-width: 30%;
+  padding-left: 5%;
 }
 .header-photo-2 {
-  background: #fff;
-  width: 40%;
+  max-width: 30%;
 }
-/*img {max-width: 40%;}*/
-/*img {
-  width: 50%;
-}*/
-
 .page-title {
-  width: 70%;
-  padding-top: 10%;
-  background-color: #fff;
+  width: 100%;
+  padding-top: 5%;
   color: #333300;
+  text-align: center;
+  justify-content: center;
 }
-.nav-head {
+.nav-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #999966;
-
 }
 .nav-item {
   font-size: $font-large;
   color: #fff;
   text-decoration: none;
-  padding-left: 1rem;
+  justify-content: space-around;
+  padding-left: 4rem;
 }
-.main-wrapper {
-  display: flex;
-  flex-direction: row;
+h1 {
+  font-size: $font-veryLarge;
+  text-align: center;
+  color: #fff;
 }
-.sidebar {
+h3 {
+  color: #fff;
+  text-align: center;
+  font-size: $font-veryLarge;
+}
+.aside-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: #556B2F
+  background-color: #556B2F;
+  width: 100%;
 }
 .activity {
   color: #fff;
+  padding-top: 1em;
+  padding-left: 2em;
 }
-.contentMain {
+.section-wrapper {
   display: flex;
-  height: 50%;
+  width: 100%;
   flex-direction: column;
   background-color: #336600;
 }
-p {
-  font-size: $font-large;
+.welcome > p {
+  font-size: $font-veryLarge;
+  text-align: center;
   color: #fff;
 }
 .photos {
   display: flex;
   flex-direction: row;
-}
-.where {
-  color: #fff;
-  font-size: $font-large;
+  background-color: #336600;
 }
 .mtBaker {
-  color: #fff;
-  width: 100%
-}
-.baker-1 {
-  width: 25%;
-}
-.tulips {
+  flex-direction: column;
   color: #fff;
   width: 100%;
 }
+.mtBaker > p {
+  font-size: $font-large;
+  color: black;
+  width: 100%;
+  text-align: center;
+  padding-left: 2rem;
+}
+.baker-1 {
+  width: 100%;
+  border-radius: 25%;
+  padding-left: 3rem;
+}
+.tulips {
+  flex-wrap: column wrap;
+  color: #fff;
+  height: 100%;
+}
 .tulips-1 {
-  width: 25%;
+  width: 80%;
+  border-radius: 25%;
+  padding-left: 3rem;
+}
+.tulips > p {
+  font-size: $font-large;
+  color:black;
+  width: 75%;
+  justify-content: center;
+  text-align: center;
+}
+.canoe {
+  flex-wrap: column wrap;
+  color: #fff;
+  width: 100%;
+}
+.canoe > p {
+  font-size: $font-large;
+  color:black;
+  text-align: center;
+  width: 80%;
+}
+.canoe-1 {
+  max-width: 100%;
+  border-radius: 25%;
+  padding-right: 10%;
 }
 .footer {
   display: flex;
   width: 100%;
-  flex-flow: row;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: #333300;
   color: #fff;
 }
 .needle {
-  width: 50%
+  width: 25%;
+}
+.market {
+  width: 25%;
 }
 .companyInfo {
   font-size: $font-large;
   color: #fff;
-}
-.market {
   width: 50%;
+  padding-top: 10%;
+  text-align: center;
 }
