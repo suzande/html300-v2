@@ -14,11 +14,13 @@
     <title>Assignment 06 - Bootstrap 5</title>
 </head>
 
-<body>
-    <header>
-        <h1 class="fs-5 p-4">Welcome to destinations to vist site in Washington and Oregon!</h1>
+<body class="bg-light">
+    <header class="text-dark bg-success">
+        <h1 class="fs-2 ps-4 pt-5 pb-5">Welcome to destinations to vist site in Washington and
+            Oregon!
+        </h1>
     </header>
-    <ul class="nav list-unstyled p-4 fs-5">
+    <ul class="nav list-unstyled p-4 fs-5 border border-4 bg-warning">
         <li class="nav-item">
             <a class="nav-link link-primary" href="index.html">Home</a>
         </li>
@@ -36,51 +38,44 @@
         </li>
     </ul>
     <main>
-        <section>
-            <form class="p-3">
-                <div class="mb-3">
-                    <label for="emailInput" class="form-label">Email Address</label>
-                    <input type="email" class="form-control w-25" id=emailInput>
-                    <div id="emailAssistance" class="form-text"></div>
-                </div>
-                <div class="mb-3">
-                    <label for="emailInputPassword" class="form-label">Password</label>
-                    <input type="password" class="form-control w-25" id=emailInput>
-                    <div id="emailAssistance" class="form-text"></div>
-                </div>
-                <div class="mb3">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-        </section>
-        <section class="ps-4">
+        <section class="ps-4 pt-4">
+            <h2 class="fs-4">Please check those that apply</h2>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheck-1">
+                <label class="form-check-label" for="flexCheck-1">
                     "I love mountains!"
                 </label>
             </div>
             <div class="form=check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheck-2">
+                <label class="form-check-label" for="flexCheck-2">
                     "I love cultural events!"
                 </label>
             </div>
             <div class="form=check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheck-3">
+                <label class="form-check-label" for="flexCheck-3">
                     "I love festivals!"
                 </label>
             </div>
             <div class="form=check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheck-4">
+                <label class="form-check-label" for="flexCheck-4">
                     "I love watersports!"
                 </label>
             </div>
         </section>
-        <section cl>
-            <h2 class="fs-4 p-4 fst-italic">Select and item to see areas in Washington and Oregon</h2>
+
+        <section class="p-4">
+            <h2 class="fs-4">How long do you plan to visit?</h2>
+            <p>Our limit to staying is 14 days. How many do you plan to stay?</p>
+            <input id="daysNum">
+            <button type="button" onclick="daysVisiting()">submit</button>
+            <p id="thankYou"></p>
+        </section>
+
+        <section class="ps-4">
+            <h2 class="fs-4 ps-2 fst-italic pb-3">Select and item to see areas in Washington and Oregon</h2>
             <div class="accordion accordion-flush p-1 w-50" id="accordionFlushElement">
                 <div class="accordion-item border border-primary border-2">
                     <h2 class="accordion-header" id="flush-headingOne">
@@ -117,7 +112,21 @@
                 </div>
             </div>
         </section>
+        <section class="pt-4">
+            <h2 class="fs-4 ps-4">Please share your email with us for our mailing list.</h2>
+            <form class="ps-4 pb-5" name="vacation">
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control w-25" required="required" value="email@example.com">
+                    <div class="form-text">We will not share your email.</div>
+                </div>
+                <div class="mb3">
+                    <button type="submit" onClick="emailReceived()" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </section>
     </main>
+    <script src="./scripts/scripts.js"></script>
 </body>
 
 </html>
