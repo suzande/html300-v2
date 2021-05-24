@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/vue@next"></script>
+  <title>Assignment 07 - Vue and Adding Methods</title>
+</head>
+
+<body>
+  <header>
+    <img class="header-photo-l" src=images/teepee.svg alt="cartoon of teepee home sweet home">
+    <h1 class="page-title">Find your destination to visit and upload photos!</h1>
+    <img class="header-photo-r" src=images/CannonBeachOregon.jpg alt="Cannon Beach Oregon">
+  </header>
+  <nav class="nav-head">
+    <a class="nav-item" href="watersports.html">WaterSports</a>
+    <a class="nav-item" href="destinations.html">Popular Tourist Destinations</a>
+    <a class="nav-item" href="cultural-events.html">Cultural Gatherings</a>
+    <a class="nav-item" href="upload-photos.html">Upload Photos</a>
+  </nav>
+  <h1>Cultural Events in Washington and Oregon</h1>
+
+  <!--Here is the Vue Script Call for Washington Locations-->
+  <div id="waLocations">
+    Washington Locations: {{ waPlaces }}
+    {{ generateGreeting() }}
+    <span v-if="name === 'Beautiful'">
+      Welcome to {{ name }} Washington!
+    </span>
+    <span v-else>Your looking at Oregon!
+    </span>
+  </div>
+  <div id="change-photos">
+    <button @click="images +=1">Next Photo</button>
+    <p>Select the button to see next photo {{ images }} to view next.</p>
+  </div>
+
+  <!--Below here is Washington Cultural Events-->
+  <section>
+    <h2>Cultural Events in Washington</h2>
+    <img v-bind:src="imageSource" v-bind:alt="imageAlt">
+    <button v-if="showButton">See More Photos</button>
+    <ol>
+      <li v-for="location in locations">
+        {{ location }}
+      </li>
+    </ol>
+    <p v-if="name ==== 'Beautiful'"></p>
+  </section>
+  <!--Here is the Vue Script Call for Oregon Locations-->
+  <section>
+    <h2 v-bind:title="favorite">Cultural Events in Oregon </h2>
+    <!--Below here is Washington Cultural Events-->
+  </section>
+
+</body>
+
+</html>
+<script type="text/javascript">
+  const waEvents = {
+    data() {
+      return {
+        showButton: true,
+        greeting: this.generateGreeting(),
+        name: "Beautiful",
+        locations: [
+          { text: 'Canadian Border' },
+          { text: 'Washington Coast' },
+          { text: 'Mount Baker' },
+          { text: 'Mount Rainier' },
+          { text: 'Pow-wow' }
+        ],
+        images: [{
+          id: 1,
+          src: "./images/CanoeJourney.jpg",
+          alt: "Canoe Journey Alki Beach",
+          id: 2,
+          src: "./images/mt-baker-Washington.jpg",
+          alt: "Mount Baker east of Bellingham, Washington",
+          id: 3,
+          src: "./images/MtRainer.jpg",
+          alt: "Mount Baker east of Seattle, Washington"
+        }]
+      }
+    },
+    methods: {
+      generateGreeting() {
+        return "Hello Welcome to the Destination Site!"
+      },
+      nextPhoto() {
+        this.image = this.images[this.index];
+        this.index = (this.index + 1) % this.images.length;
+      }
+    }
+  };
+  Vue.createApp(allPhotos).mount('change-photos');
+  Vue.createApp(waEvents).mount('#waLocations');
+</script>

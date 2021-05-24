@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Activity 07 - Vue</title>
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
 
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Activity 07 - Vue</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <img v-if="imageShowing" v-bind:src="imageSrc">
+    <button v-if="imageShowing">IMG BTN</button>
+    <ul>
+        <li v-for="num in favNumbers">
+            {{ num }}
+        </li>
+    </ul>
+    <p>Counter: {{ counter }}</p>
+    <button v-on:click="plusOne">Add one!</button>
+    <button v-on:click="addMore(3)">Add Three!</button>
+</div>
+
+<script type="text/javascript">
+        const CounterApp = {
+            data() {
+                return {
+                    counter: 0,
+                    name: "cheri",
+                    greeting: this.generateGreetings(),
+                    favNumbers: [3, 6, 15],
+                    imageShowing: false,
+                    imageShowing: false,
+                    imageSrc: "https://picsum.photos/200/300"}
+            },
+            data() {
+                return {
+                    
+                }
+            }
+
+    Vue.createApp(CounterApp).mount('#app')
+</script>
+        
+
+    </script>
+</body>
+
 </html>
