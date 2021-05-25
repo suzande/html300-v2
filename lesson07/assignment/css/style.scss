@@ -37,13 +37,13 @@ h1 {
   margin: 0;
 }
 h2 {
-  color:white;
+  color:#000000;
   font-size: $font-large;
   padding-left: 5rem;
 }
 .nav-head {
   display: flex;
-  padding-left: 10%;
+  padding-left: 5%;
   background-color: #999966;
 }
 .nav-item {
@@ -51,8 +51,9 @@ h2 {
   color: white;
   text-decoration: none;
   list-style-type: none;
-  padding: 1rem 5rem 1rem 5rem;
+  padding: 1rem 5rem 1rem 3rem;
   transition: all .1s ease-out-in;
+  text-align: center;
 }
 .nav-item:hover {
     transition-duration: 3s;
