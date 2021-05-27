@@ -23,56 +23,71 @@
     <a class="nav-item" href="cultural-events.html">Cultural Gatherings</a>
     <a class="nav-item" href="upload-photos.html">Upload Photos</a>
   </nav>
-  <h1>Cultural Events in Washington and Oregon</h1>
+  <!--Here is the Vue Script for index.html-->
+  <!--XXXXXXXXXXXXXXXXXXXXXXX-->
 
-  <!--Here is the Vue Script Call for Washington Locations-->
   <div id="app">
-    <!-- Washington Locations: -->
-    <h3>{{ generateGreeting() }}</h3>
-    <span v-if="name === 'Beautiful'">
-      Welcome to {{ name }} Washington!
-    </span>
-    <span v-else>Your looking at Oregon!
-    </span>
-    <!--Here I want to go through an Array of Photos to see all of them.-->
-    <!--Uses the "images" in waEvents-->
 
-    <img class="waPhoto" v-bind:src="imagesWa[imageIndex].src" v-bind:alt="imagesWa[imageIndex].alt">
-    <button v-on:click="addOneWa">Next Photo</button>
-    <p>Select the button to see next photo to view next.</p>
+    <!--XXXXXXXXXXXXXXXXXXXXXXX-->
+    <div class="wrapper">
+      <section class="welcomeIntro">
+        <h1>Cultural Events in Washington and Oregon</h1>
+        <!-- Washington Locations: -->
+        <h3>{{ generateGreeting() }}</h3>
+        <span v-if="name === 'Beautiful'">
+          Welcome to {{ name }} Washington!
+        </span>
+        <span v-else>Your looking at Oregon!
+        </span>
+      </section>
+      <!--Here I want to go through an Array of Photos to see all of them.-->
+      <!--Uses the "images" in waEvents-->
 
-    <!--Below here is Washington Cultural Events-->
-    <section>
-      <h2>Cultural Events in Washington</h2>
-      <!--<img v-bind:src="imageSource" v-bind:alt="imageAlt">-->
-      <!--<button v-if="showButton">See More Photos</button>-->
-
-      <!--Here is where I can calling for the text list of locations.-->
-
-      <ul>
-        <li v-for="waLocation in waLocations">
-          {{ waLocation.text }}
-        </li>
-      </ul>
-      <p v-if="name === 'Beautiful'">Beautiful!</p>
-    </section>
-
-    <!--Here is the Vue Script Call for Oregon Locations-->
-    <section>
-      <h2 v-bind:title="title">{{ message }}</h2>
       <!--Below here is Washington Cultural Events-->
-      <ul>
-        <li v-for="orLocation in orLocations">
-          {{ orLocation.text }}
-        </li>
-      </ul>
-      <button v-on:click="addOneOr">Next Photo</button>
-      <p>Select the button to see next photo to view next.</p>
-      <img class="orPhoto" v-bind:src="imagesOr[imageIndex].src" v-bind:alt="imagesOr[imageIndex].alt">
-      <p></p>
-    </section>
-  </div>
+      <!--XXXXXXXXXXXXXXXXXXXXXXX-->
+      <section class="waDestin">
+        <img class="waPhoto photoView" v-bind:src="imagesWa[imageIndex].src" v-bind:alt="imagesWa[imageIndex].alt">
+        <button class="next" v-on:click="addOneWa">Next Photo</button>
+        <p>Select the button to see next photo to view next.</p>
+        <h2>Places to see and visit in Washington</h2>
 
+        <!--Here is where I can calling for the text list of locations.-->
+
+        <ul>
+          <li class="place-1" v-for="waLocation in waLocations">
+            {{ waLocation.text }}
+          </li>
+        </ul>
+        <!--<p v-if="name === 'Beautiful'">Beautiful!</p>-->
+      </section>
+      <!--XXXXXXXXXXXXXXXXXXXXXXX-->
+      <!--Here is the Vue Script Call for Oregon Locations-->
+      <section class="orDestin">
+        <h2 v-bind:title="title">{{ message }}</h2>
+        <!--Below here is Oregon Cultural Events-->
+        <ul>
+          <li class="place-2" v-for="orLocation in orLocations">
+            {{ orLocation.text }}
+          </li>
+        </ul>
+        <p>Select the button to see next photo to view next.</p>
+        <img class="orPhoto photoView" v-bind:src="imagesOr[imageIndex].src" v-bind:alt="imagesOr[imageIndex].alt">
+        <button class="next" v-on:click="addOneOr">Next Photo</button>
+      </section>
+    </div>
+  </div>
+  <footer class="footer">
+    <img class="needle footer" src=images/SeatteSpaceNeedle.jpg
+      alt="picture of the towering Seattle Center Space Needle">
+    <div class="companyInfo">
+      <h2>Vist Seattle and State of Washington Tourist Locations</h2>
+      <p>Contact Information: HTMl 130B Sp 21: JavaScript</p>
+      <p>Address Information: 4311 11th Ave NE, Seattle, WA 98105</p>
+      <p>Hours of operation: Monday - Friday, 9:00p.m. to 5:00p.m.</p>
+      <p>Send note if requesting information.</p>
+    </div>
+    <img class="market footer" src=images/PublicMarket.jpg alt="it a picture of the Seattle Public Market">
+  </footer>
 
   <!--XxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
   <script type="text/javascript">
@@ -83,7 +98,7 @@
           greeting: this.generateGreeting(),
           name: "Beautiful",
           imageIndex: 0,
-          message: "Cultural Events in Oregon",
+          message: "Places to see and visit in Oregon ",
           title: "Favorite things to do",
           waLocations: [
             { text: 'Canadian Border' },
@@ -106,49 +121,69 @@
           },
           {
             id: 2,
+            src: "./images/haystack-rock-NeahBay.jpg",
+            alt: "Haystack Rock in the Pacific Ocean, Neah Bay, WA"
+          },
+          {
+            id: 3,
             src: "./images/mt-baker-Washington.jpg",
             alt: "Mount Baker east of Bellingham, Washington"
           },
           {
-            id: 3,
-            src: "./images/MtRainer.jpg",
-            alt: "Mount Baker east of Seattle, Washington"
+            id: 4,
+            src: "./images/MtRainier.jpg",
+            alt: "Mount Raineir east of Seattle, Washington"
           },
           {
-            id: 4,
+            id: 5,
             src: "./images/westport-crab-pots.jpg",
             alt: "Westport on the Washington Coast"
           },
           {
-            id: 5,
-            src: "./images/Dawn_dancing_1.jpg",
+            id: 6,
+            src: "./images/Dawn_dancing_2.jpg",
             alt: "University of Washington Spring Pow-wow"
+          },
+          {
+            id: 7,
+            src: "./images/BlueMountains-WallaWalla.jpg",
+            alt: "Blue Mountain Range in Walla Walla, WA"
           }
           ],
           imagesOr: [{
             id: 1,
+            src: "./images/PortlandOregon.jpg",
+            alt: "Portland, Oregon view of the city"
+          },
+          {
+            id: 2,
             src: "./images/OregonCoast.jpg",
             alt: "Oregon Coast in Lincoln City"
           },
           {
-            id: 2,
-            src: "./images/OregonTravels-Woodburn-Mall.jpg",
-            alt: "Outdoor fort at a outlet mall in Oregon! "
-          },
-          {
             id: 3,
-            src: "./images/Pow-wow-time-siletz.jpg",
-            alt: "Confederated Tribes of Siletz Oregon Indigenous Pow-wow"
+            src: "./images/DePoeBay.jpg",
+            alt: "DePoe Bay, Oregon"
           },
           {
             id: 4,
             src: "./images/Pow-wow-time-siletz.jpg",
-            alt: "Siletz Oregon Annual Pow-wow"
+            alt: "Confederated Tribes of Siletz Oregon Indigenous Pow-wow"
           },
           {
             id: 5,
-            src: "./images/Pow-wowTime.jpg",
+            src: "./images/Pow-wow-time-siletz.jpg",
             alt: "Siletz Oregon Annual Pow-wow"
+          },
+          {
+            id: 6,
+            src: "./images/PowWow_vets.jpg",
+            alt: "Grand Entry Time Annual Pow-wow"
+          },
+          {
+            id: 7,
+            src: "./images/Oregon-lighthouse.jpg",
+            alt: "Lighthouse on the Oregon Coast"
           }
           ]
         }

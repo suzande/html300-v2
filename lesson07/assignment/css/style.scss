@@ -41,6 +41,11 @@ h2 {
   font-size: $font-large;
   padding-left: 5rem;
 }
+h3 {
+  color:#000000;
+  font-size: $font-medium;
+  padding-left: 5rem;
+}
 .nav-head {
   display: flex;
   padding-left: 5%;
@@ -59,126 +64,61 @@ h2 {
     transition-duration: 3s;
     transform: scale(1.5);    
   }
-.main-page {
-  text-align: center;
-  color: white;
-  padding-top: 10rem;
-  background-color: #336600;
-  padding: 0;
-  margin: 0;
-  height: 60%;
+
+/* Welcome intro coded for lesson 07 */
+
+.photoView {
+  width: 40%;
 }
-.interests {
-  list-style-type: none;
-  font-size: $font-large;
-  line-height: 2.0;
-  padding-left: 5rem;
-}
-// YouTube video for Transform, translate
-// https://www.youtube.com/watch?v=y9M0GoiYRcI 
-// https://www.youtube.com/watch?v=zHUpx90NerM
-.mountain {
-  transform: translate(-120px,0);
-  &:hover {
-    transform: scale(5,2) translate(-3rem,0);
-  }
-  transition: transform 2s;
-}
-.ocean {
-  transform: translate(-200px,0);
-  &:hover {
-    transform: scale(5,2) translate(-3rem,0);
-  }
-  transition: transform 2s;
-}
-.water {
-  transform: translate(120px,0);
-  &:hover {
-    transform: scale(5,2) translate(-3rem,0);
-  }
-  transition: transform 2s;
-}
-.sites {
-  transform: translate(-160px,0);
-  &:hover {
-    transform: scale(5,2) translate(-3rem,0);
-  }
-  transition: transform 2s;
-}
-.last {
-  padding-bottom: 4rem;
-    transform: translate(-50px,0);
-  &:hover {
-    transform: scale(5,2) translate(-3rem,0);
-  }
-  transition: transform 2s;
-}
-.horseback {
-  width: 10%;
-  padding-bottom: 4rem;
-  position: relative;
-  animation-name: trips;
-  animation-duration: 4s;
-  animation-iteration-count: 3x;
-  animation-delay: 2s;
-  animation-timing-function: ease-in-out;
-}
-.hiker {
-  width: 10%;
-  padding-bottom: 4rem;
-  position: relative;
-  animation-name: hiker;
-  animation-duration: 4s;
-  animation-iteration-count: 3x;
-  animation-delay: 2s;
-  animation-timing-function: ease-in-out;
-}
-.kayak {
-  width: 10%;
-  padding-bottom: 4rem;
-  position: relative;
-  animation-name: kayak;
-  animation-duration: 4s;
-  animation-iteration-count: 3x;
-  animation-delay: 2s;
-  animation-timing-function: ease-in-out;
-}
-@keyframes trips {
-  0% {top: 0px; top: 0px;}
-  25% {right: 25px; top: 0px;}
-  50% {right: 90px; top: 0px;}
-  75% {right: 110px; top: 0px;}
-  100% {right: 0px; top: 0px;}
-}
-@keyframes hiker {
-  0% {top: 0px; top: 0px}
-  25% {left: 25px; top: 0px;}
-  50% {left: 90px; top: 0px;}
-  75% {left: 110px; top: 0px;}
-  100% {right: 0px; top: 0px;}
-}
-@keyframes kayak {
-  0% {top: 0px; top: 0px}
-  25% {left: 20px; top: 30px;}
-  50% {right: 0px; top: 0px;}
-}
-footer {
+.wrapper {
   display: flex;
-  height: 30rem;
+  height: 50%;
+}
+.welcomeIntro {
+  color:#000000;
+  font-size: $font-large;
+  padding-left: 5rem;
+  width: 100%;
+}
+.waDestin {
+  flex-flow: column wrap;
+}
+.orDestin {
+  flex-flow: column wrap;
+}
+.next {
+
+}
+.place-1 {
+
+}
+.place-2 {
+
+}
+
+
+
+/*--Top Footer Code--*/
+.footer {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #333300;
+  color: #fff;
 }
 .needle {
-  width: 20%;
-}
-.who-are-we {
-  flex-direction: column;
-  text-align: center;
-  font-family: $font-large;
-  font-size: $font-large;
-  padding-top: 5rem;
-  background-color: #333300;
-  color: white;
-  width: 60%;
+  width: 25%;
 }
 .market {
-  width: 20%;
-} 
+  width: 25%;
+}
+.companyInfo {
+  font-size: $font-large;
+  color: #fff;
+  width: 50%;
+  padding-top: 10%;
+  text-align: center;
+}
+/*--End of Footer--*/
