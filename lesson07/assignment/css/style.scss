@@ -15,18 +15,23 @@ $font-veryLarge: 2.0rem;
 /* start of css in SCSS file */
 header {
   display: flex;
-  height: 20rem;
+  width: 100%;
+  flex-wrap: wrap;
 }
-.header-photo-l {
+.header-photo-1 {
   padding-left: 5%;
   width: 25%;
   background-color: white;
+  flex-wrap: wrap;
 }
-.header-photo-r {
+.header-photo-2 {
+  padding-left: 5%;
   width: 25%;
+  background-color: white;
+  flex-wrap: wrap;
 }
 .page-title {
-  padding-top: 4%;
+  padding-top: 7%;
   width: 50%;
   font-size: 2.1rem;
 }
@@ -35,19 +40,19 @@ h1 {
   font-size: 2.5rem;
   text-align: center;
   margin: 0;
+  flex-wrap: wrap;
 }
 h2 {
   color:#000000;
-  font-size: $font-large;
-  padding-left: 5rem;
+  font-size: $font-large;  
 }
 h3 {
   color:#000000;
   font-size: $font-medium;
-  padding-left: 5rem;
 }
 .nav-head {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 5%;
   background-color: #999966;
 }
@@ -59,6 +64,7 @@ h3 {
   padding: 1rem 5rem 1rem 3rem;
   transition: all .1s ease-out-in;
   text-align: center;
+  flex-wrap: wrap;
 }
 .nav-item:hover {
     transition-duration: 3s;
@@ -67,57 +73,89 @@ h3 {
 
 /* Welcome intro coded for lesson 07 */
 
-.photoView {
-  width: 40%;
-}
 .wrapper {
   display: flex;
+  flex-flow: column wrap;
   height: 50%;
 }
 .welcomeIntro {
   color:#000000;
   font-size: $font-large;
-  padding-left: 5rem;
   width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.frame {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .waDestin {
   flex-flow: column wrap;
+  width: 40%;
+  margin-right: 0;
+  justify-content: center;
+  text-align: center;
 }
 .orDestin {
   flex-flow: column wrap;
+  width: 40%;
+  margin-right: 0;
+  text-align: center;
 }
-.next {
 
+.photoView-1 {
+  width: 90%;
+  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.photoView-2 {
+  width: 90%;
+  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.next-1 {
+  flex-wrap: column wrap;
+}
+.next-2 {
+  flex-wrap: column wrap;
 }
 .place-1 {
-
+  list-style-type: none;
+  padding: .2rem;
 }
 .place-2 {
-
+  list-style-type: none;
+  padding: .2rem;
 }
-
-
-
 /*--Top Footer Code--*/
 .footer {
   display: flex;
   width: 100%;
-  height: 25%;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #333300;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.footer-title {
+  font-size: $font-large;
   color: #fff;
 }
 .needle {
   width: 25%;
 }
 .market {
-  width: 25%;
+  width: 35%;
+  margin-right: 0;
 }
 .companyInfo {
-  font-size: $font-large;
+  font-size: $font-medium;
   color: #fff;
-  width: 50%;
+  width: 40%;
   padding-top: 10%;
   text-align: center;
 }
