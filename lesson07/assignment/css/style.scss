@@ -1,0 +1,162 @@
+// Import partials here
+@import '_base.normalize';
+
+// Common Font Sizes
+$font-verdana: Verdana, Geneva, Tahoma, sans-serif;
+$font-tahoma: Tahoma, sans-serif;
+$font-small: .6rem;
+$font-medium: 1rem;
+$font-large: 1.5rem;
+$font-veryLarge: 2.0rem;
+
+* {
+  box-sizing: border-box;
+}
+/* start of css in SCSS file */
+header {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.header-photo-1 {
+  padding-left: 5%;
+  width: 25%;
+  background-color: white;
+  flex-wrap: wrap;
+}
+.header-photo-2 {
+  padding-left: 5%;
+  width: 25%;
+  background-color: white;
+  flex-wrap: wrap;
+}
+.page-title {
+  padding-top: 7%;
+  width: 50%;
+  font-size: 2.1rem;
+}
+h1 {
+  padding-top: 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+  flex-wrap: wrap;
+}
+h2 {
+  color:#000000;
+  font-size: $font-large;  
+}
+h3 {
+  color:#000000;
+  font-size: $font-medium;
+}
+.nav-head {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5%;
+  background-color: #999966;
+}
+.nav-item {
+  font-size: $font-large;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 1rem 5rem 1rem 3rem;
+  transition: all .1s ease-out-in;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.nav-item:hover {
+    transition-duration: 3s;
+    transform: scale(1.5);    
+  }
+
+/* Welcome intro coded for lesson 07 */
+
+.wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  height: 50%;
+}
+.welcomeIntro {
+  color:#000000;
+  font-size: $font-large;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.frame {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.waDestin {
+  flex-flow: column wrap;
+  width: 40%;
+  margin-right: 0;
+  justify-content: center;
+  text-align: center;
+}
+.orDestin {
+  flex-flow: column wrap;
+  width: 40%;
+  margin-right: 0;
+  text-align: center;
+}
+
+.photoView-1 {
+  width: 90%;
+  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.photoView-2 {
+  width: 90%;
+  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.next-1 {
+  flex-wrap: column wrap;
+}
+.next-2 {
+  flex-wrap: column wrap;
+}
+.place-1 {
+  list-style-type: none;
+  padding: .2rem;
+}
+.place-2 {
+  list-style-type: none;
+  padding: .2rem;
+}
+/*--Top Footer Code--*/
+.footer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #333300;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.footer-title {
+  font-size: $font-large;
+  color: #fff;
+}
+.needle {
+  width: 25%;
+}
+.market {
+  width: 35%;
+  margin-right: 0;
+}
+.companyInfo {
+  font-size: $font-medium;
+  color: #fff;
+  width: 40%;
+  padding-top: 10%;
+  text-align: center;
+}
+/*--End of Footer--*/

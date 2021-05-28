@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/vue@next"></script>
+  <title>Assignment 07 - Vue and Adding Methods</title>
+</head>
+
+<body>
+  <header>
+    <img class="header-photo-1" src=images/teepee.svg alt="cartoon of teepee home sweet home">
+    <h1 class="page-title">Find your destination to visit!</h1>
+    <img class="header-photo-2" src=images/CannonBeachOregon.jpg alt="Cannon Beach Oregon">
+  </header>
+  <nav class="nav-head">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="watersports.html">WaterSports</a>
+    <a class="nav-item" href="destinations.html">Popular Tourist Destinations</a>
+    <a class="nav-item" href="cultural-events.html">Cultural Gatherings</a>
+    <a class="nav-item" href="upload-photos.html">Upload Photos</a>
+  </nav>
+  <!--Here is the Vue Script for index.html-->
+  <!--XXXXXXXXXXXXXXXXXXXXXXX-->
+
+  <div id="app">
+
+    <!--XXXXXXXXXXXXXXXXXXXXXXX-->
+    <div class="wrapper">
+      <section class="welcomeIntro">
+        <h1>Cultural Events in Washington and Oregon</h1>
+        <!-- Washington Locations: -->
+        <h3>{{ generateGreeting() }}</h3>
+        <span v-if="name === 'Beautiful'">
+          Welcome to {{ name }} Washington!
+        </span>
+        <span v-else>Your looking at Oregon!
+        </span>
+      </section>
+      <!--Here I want to go through an Array of Photos to see all of them.-->
+      <!--Uses the "images" in waEvents-->
+
+      <!--Below here is Washington Cultural Events-->
+      <!--XXXXXXXXXXXXXXXXXXXXXXX-->
+      <div class="frame">
+        <section class="waDestin">
+          <img class="photoView-1" v-bind:src="imagesWa[imageIndex].src" v-bind:alt="imagesWa[imageIndex].alt">
+          <button class="next-1" v-on:click="addOneWa">Next Photo</button>
+          <p>Select the button to see next photo to view next.</p>
+          <h2>Places to see and visit in Washington</h2>
+
+          <!--Here is where I can calling for the text list of locations.-->
+
+          <ul>
+            <li class="place-1" v-for="waLocation in waLocations">
+              {{ waLocation.text }}
+            </li>
+          </ul>
+          <!--<p v-if="name === 'Beautiful'">Beautiful!</p>-->
+        </section>
+        <!--XXXXXXXXXXXXXXXXXXXXXXX-->
+        <!--Here is the Vue Script Call for Oregon Locations-->
+        <section class="orDestin">
+          <img class="photoView-2" v-bind:src="imagesOr[imageIndex].src" v-bind:alt="imagesOr[imageIndex].alt">
+          <button class="next-2" v-on:click="addOneOr">Next Photo</button>
+          <p>Select the button to see next photo to view next.</p>
+          <h2 v-bind:title="title">{{ message }}</h2>
+          <!--Below here is Oregon Cultural Events-->
+          <ul>
+            <li class="place-2" v-for="orLocation in orLocations">
+              {{ orLocation.text }}
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <img class="needle footer" src=images/SeatteSpaceNeedle.jpg
+      alt="picture of the towering Seattle Center Space Needle">
+    <div class="companyInfo">
+      <h2 class="footer-title">Visit Tourist Locations in Washington/Oregon!</h2>
+      <p>Contact Information: HTMl 130B Sp 21: JavaScript</p>
+      <p>Address Information: 4311 11th Ave NE, Seattle, WA 98105</p>
+      <p>Hours of operation: Monday - Friday, 9:00p.m. to 5:00p.m.</p>
+      <p>Send a note if requesting information.</p>
+    </div>
+    <img class="market footer" src=images/PublicMarket.jpg alt="it a picture of the Seattle Public Market">
+  </footer>
+  <!--XxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+  <script type="text/javascript">
+    const waEvents = {
+      data() {
+        return {
+          showButton: true,
+          greeting: this.generateGreeting(),
+          name: "Beautiful",
+          imageIndex: 0,
+          message: "Places to see and visit in Oregon ",
+          title: "Favorite things to do",
+          waLocations: [
+            { text: 'Canadian Border' },
+            { text: 'Washington Coast' },
+            { text: 'Mount Baker' },
+            { text: 'Mount Rainier' },
+            { text: 'Pow-wow Time' }
+          ],
+          orLocations: [
+            { text: 'Portland' },
+            { text: 'Oregon Coast' },
+            { text: 'Mount Hood' },
+            { text: 'Table Rock' },
+            { text: 'Pow-wow Time' }
+          ],
+          imagesWa: [{
+            id: 1,
+            src: "./images/CanoeJourney.jpg",
+            alt: "Canoe Journey Alki Beach"
+          },
+          {
+            id: 2,
+            src: "./images/haystack-rock-NeahBay.jpg",
+            alt: "Haystack Rock in the Pacific Ocean, Neah Bay, WA"
+          },
+          {
+            id: 3,
+            src: "./images/mt-baker-Washington.jpg",
+            alt: "Mount Baker east of Bellingham, Washington"
+          },
+          {
+            id: 4,
+            src: "./images/MtRainier.jpg",
+            alt: "Mount Raineir east of Seattle, Washington"
+          },
+          {
+            id: 5,
+            src: "./images/westport-crab-pots.jpg",
+            alt: "Westport on the Washington Coast"
+          },
+          {
+            id: 6,
+            src: "./images/Dawn_dancing_2.jpg",
+            alt: "University of Washington Spring Pow-wow"
+          },
+          {
+            id: 7,
+            src: "./images/BlueMountains-WallaWalla.jpg",
+            alt: "Blue Mountain Range in Walla Walla, WA"
+          }
+          ],
+          imagesOr: [{
+            id: 1,
+            src: "./images/PortlandOregon.jpg",
+            alt: "Portland, Oregon view of the city"
+          },
+          {
+            id: 2,
+            src: "./images/OregonCoast.jpg",
+            alt: "Oregon Coast in Lincoln City"
+          },
+          {
+            id: 3,
+            src: "./images/DePoeBay.jpg",
+            alt: "DePoe Bay, Oregon"
+          },
+          {
+            id: 4,
+            src: "./images/Pow-wow-time-siletz.jpg",
+            alt: "Confederated Tribes of Siletz Oregon Indigenous Pow-wow"
+          },
+          {
+            id: 5,
+            src: "./images/Pow-wow-time-siletz.jpg",
+            alt: "Siletz Oregon Annual Pow-wow"
+          },
+          {
+            id: 6,
+            src: "./images/PowWow_vets.jpg",
+            alt: "Grand Entry Time Annual Pow-wow"
+          },
+          {
+            id: 7,
+            src: "./images/Oregon-lighthouse.jpg",
+            alt: "Lighthouse on the Oregon Coast"
+          }
+          ],
+        }
+      },
+      methods: {
+        generateGreeting() {
+          return "Hello Welcome to the Destination Site!"
+        },
+        addOneWa() {
+          this.imageIndex = (this.imageIndex + 1) % this.imagesWa.length;
+        },
+        addOneOr() {
+          this.imageIndex = (this.imageIndex + 1) % this.imagesOr.length;
+        },
+      }
+    };
+    Vue.createApp(waEvents).mount('#app');
+  </script>
+</body>
+
+</html>
